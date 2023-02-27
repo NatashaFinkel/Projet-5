@@ -29,27 +29,25 @@ let bannerImg = document.getElementById("banner-img");
 let bannerImgFileName = bannerImg.src.substring(bannerImg.src.lastIndexOf("/") + 1, bannerImg.src.length);
 
 
-//  Cette boucle débute à zéro, et s'incrémente (+1) 
+//  Cette boucle débute à 1, et s'incrémente (+1) 
 //  tant que la valeur de i est inférieure
 //  à la longueur de slides[].
-for (let i = 0; i < slides.length; i++) {
+for (let i = 1; i < slides.length; i++) {
 
 	//  Cette boucle crée des  <div class="dot">.
 	let dotElement = document.createElement("div");
 	dotElement.className = "dot";
+
 
 	//  appendChild rajoute l'élément
 	//  dotElement comme dernier 
 	//  enfant de bullet_like_item.
 	bullet_like_item.appendChild(dotElement);
 
-	//  Si le slide actuel sur la bannière correspond strictement
-	//  à l'une des images de slides[], on ajoute
-	//   "dot" + "dot_selected".
-	if (bannerImgFileName === slides[i].image) {
-		dotElement.className + "dot_selected";
-	}
+	dotElement.className + "dot_selected";
 }
+
+
 
 function addDotSelectedToElement(element) {
 	element.classList.add("dot_selected");
@@ -135,5 +133,6 @@ document.getElementById("second_arrow").addEventListener('click', function () {
 			removeDotSelectedFromElement(dotElement[i]);
 		}
 	}
+
 	changeImageAndTagLine(bannerP, slides[nextImageIdex]);
 });
