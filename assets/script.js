@@ -60,7 +60,7 @@ function removeDotSelectedFromElement(element) {
 }
 
 
-// (Attention : les variables déclarées dans une 
+//  (Attention : les variables déclarées dans une 
 //  fonction ne sont valables que dans celle-ci).
 //  innerHTML est le contenu HTML de l'élément.
 function changeImageAndTagLine(bannerP, nextSlide) {
