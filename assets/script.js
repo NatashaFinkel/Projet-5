@@ -103,7 +103,7 @@ document.getElementById("first_arrow").addEventListener('click', function () {
 		}
 	}
 
-	//  Cet addEventListener a une conséquence sur chacun de ces trois éléments 
+	//  Cet addEventListener a une conséquence sur chacun de ces deux éléments 
 	changeImageAndTagLine(bannerP, slides[nextImageIdex]);
 });
 
